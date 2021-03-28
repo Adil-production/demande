@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            font-family: Janna Lt;
+        }
+        body{
+            background: rgb(5, 0, 94);
+/*background: linear-gradient(90deg, rgba(12,0,255,1) 0%, rgba(255,68,0,1) 100%);*/
+        }
+        .what{
+            font-family: Janna LT ;
+            text-align:center;
+        }
+        .container{
+            font-family: Janna LT;
+            text-align:center;
+        }
+        .btn{
+            width: 130px;
+            height: 130px;
+            font-family: Janna LT ;
+            border: solid black 0.4px;
+            background-color: rgb(0, 153, 255);
+            box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 75);
+           margin: 6%;
+           font-size: 11px;
+            color: rgb(255, 255, 255);
+            border-radius: 10px ;
+            
+        }
+        .submit{
+            width: 130px;
+            height: 40px;
+            font-family: Janna LT ;
+            border: solid black 0.4px;
+            background-color: rgb(0, 153, 255);
+            box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 75);
+           margin: 6%;
+           font-size: 11px;
+            color: rgb(255, 255, 255);
+            border-radius: 10px ;
+        }
+        #items1{
+            display: none;
+        }
+        #items2{
+            display: none;
+        }
+        #items3{
+            display: none;
+        }
+        #items4{
+            display: none;
+        }
+        #items5{
+            display: none;
+        }
+        #items6{
+            display: none;
+        }
+        .style{
+            font-family: Janna LT ;
+            color: rgb(255, 255, 255);
+        }
+        #all-items{
+            
+        }
+        #title{
+            padding:2.4%;
+	margin:-2.5%;
+	width: 100%;
+            color: white;
+            font-family: Janna LT ;
+            background-color: orange;
+            top: 100px;
+            left: 100%;
+	
+        }
+        #rItems1{
+            transform: translateX(-40%);
+            
+        }
+        #rItems2{
+            transform: translateX(-40%);
+            
+        }
+        #rItems3{
+            transform: translateX(-40%);
+            
+        }
+        #rItems4{
+            transform: translateX(-40%);
+        }
+        #rItems5{
+            transform: translateX(-40%);
+        }
+        #rItems6{
+            transform: translateX(-40%);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="title"  align="center">
+        <h2>
+            مكتبة و وكالة عمومية الفيض
+        </h2>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div align="center" id="all-items">
+        <div >
+    <button id="btn1" onclick="btn1()" class="btn">الادوات المدرسية</button>    <button id="btn2" onclick="btn2()" class="btn">فوطوكوبي</button>
+</div>
+    <br />
+    <div>
+    <button id="btn3" onclick="btn3()" class="btn">AR - FR طبع البحوث</button>    <button id="btn4" onclick="btn4()" class="btn">تحرير العقود والطلبات</button>
+</div>
+    <br />
+    <div>
+    <button id="btn5" onclick="btn5()" class="btn">الخدمات المعلوماتية</button>    <button id="btn6" onclick="btn6()" class="btn"> التعبئات</button>
+</div>
+</div>
+<div id="items1" align="center">
+    <h2 onclick="rItems1()" id="rItems1" style="color: white;">↩</h2>
+        <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+            <div class="container">
+                <label for="domaine" class="style">المجال</label> 
+                <br />  
+                <input type="text" id="domaine" name="domaine" value="الادوات المدرسية" class="what" id="what1"/>  
+        </div>
+            <div class="container">
+                <label for="les fournitures scolaires"></label>
+        <label for="Qu'est-ce que le client souhaite acheter?" class="style">ما الذي تريد شرائه ؟</label>
+        <br />
+        <input type="text" id="Qu'est-ce que le client souhaite acheter?" name="Qu'est-ce que le client souhaite acheter?"/>
+        </div>
+        <div class="container">
+        <label for="quand?" class="style">متى</label> 
+        <br />  
+        <input type="text" id="quand?" name="quand?"/>    
+
+        </div>
+        <div class="container">
+        <label for="tous le nom" class="style">الاسم الكامل</label>   
+        <br />
+        <input type="text" id="tous le nom" name="tous le nom"/>  
+        </div>
+        <div class="container">
+        <label for="email" class="style">بريد الالكتروني</label>   
+        <br />
+        <input type="email" id="email" name="email"/> 
+        </div>
+        <button type="submit" class="submit">ارسال</button>
+
+        </form>
+    </div>
+
+
+
+
+
+    <div id="items2" align="center">
+        <h2 onclick="rItems2()" id="rItems1" style="color: white;">↩</h2>
+            <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                <div class="container">
+                    <label for="domaine" class="style">المجال</label> 
+                    <br />  
+                    <input type="text" id="domaine" name="domaine" value="فوطوكوبي" class="what" id="what2"/>  
+            </div>
+            <div class="container">
+            <label for="quand?" class="style">متى</label> 
+            <br />  
+            <input type="text" id="quand?" name="quand?"/>    
+    
+            </div>
+            <div class="container">
+            <label for="tous le nom" class="style">الاسم الكامل</label>   
+            <br />
+            <input type="text" id="tous le nom" name="tous le nom"/>  
+            </div>
+            <div class="container">
+            <label for="email" class="style">بريد الالكتروني</label>   
+            <br />
+            <input type="email" id="email" name="email"/> 
+            </div>
+            <button type="submit" class="submit">ارسال</button>
+    
+            </form>
+        </div>
+        <div id="items3" align="center">
+            <h2 onclick="rItems3()" id="rItems3" style="color: white;">↩</h2>
+                <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                    <div class="container">
+                        <label for="domaine" class="style">المجال</label> 
+                        <br />  
+                        <input type="text" id="domaine" name="domaine" value="طبع البحوث" class="what" id="what3"/>  
+                </div>
+                <div class="container">
+                <label for="quand?" class="style">متى</label> 
+                <br />  
+                <input type="text" id="quand?" name="quand?"/>    
+        
+                </div>
+                <div class="container">
+                <label for="tous le nom" class="style">الاسم الكامل</label>   
+                <br />
+                <input type="text" id="tous le nom" name="tous le nom"/>  
+                </div>
+                <div class="container">
+                <label for="email" class="style">بريد الالكتروني</label>   
+                <br />
+                <input type="email" id="email" name="email"/> 
+                </div>
+                <button type="submit" class="submit">ارسال</button>
+        
+                </form>
+            </div>
+            <div id="items4" align="center">
+                <h2 onclick="rItems4()" id="rItems4" style="color: white;">↩</h2>
+                    <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                        <div class="container">
+                            <label for="domaine" class="style">المجال</label> 
+                            <br />  
+                            <input type="text" id="domaine" name="domaine" value="تحرير العقود والطلبات" class="what" id="what4"/>  
+                    </div>
+                    <div class="container">
+                    <label for="quand?" class="style">متى</label> 
+                    <br />  
+                    <input type="text" id="quand?" name="quand?"/>    
+            
+                    </div>
+                    <div class="container">
+                    <label for="tous le nom" class="style">الاسم الكامل</label>   
+                    <br />
+                    <input type="text" id="tous le nom" name="tous le nom"/>  
+                    </div>
+                    <div class="container">
+                    <label for="email" class="style">بريد الالكتروني</label>   
+                    <br />
+                    <input type="email" id="email" name="email"/> 
+                    </div>
+                    <button type="submit" class="submit">ارسال</button>
+            
+                    </form>
+                </div>
+                <div id="items5" align="center">
+                    <h2 onclick="rItems5()" id="rItems5" style="color: white;">↩</h2>
+                        <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                            <div class="container">
+                                <label for="domaine" class="style">المجال</label> 
+                                <br />  
+                                <input type="text" id="domaine" name="domaine" value="الخدمات المعلوماتية" class="what" id="what5"/>  
+                        </div>
+                        <div class="container">
+                        <label for="quand?" class="style">متى</label> 
+                        <br />  
+                        <input type="text" id="quand?" name="quand?"/>    
+                
+                        </div>
+                        <div class="container">
+                        <label for="tous le nom" class="style">الاسم الكامل</label>   
+                        <br />
+                        <input type="text" id="tous le nom" name="tous le nom"/>  
+                        </div>
+                        <div class="container">
+                        <label for="email" class="style">بريد الالكتروني</label>   
+                        <br />
+                        <input type="email" id="email" name="email"/> 
+                        </div>
+                        <button type="submit" class="submit">ارسال</button>
+                
+                        </form>
+                    </div>
+                    <div id="items6" align="center">
+                        <h2 onclick="rItems6()" id="rItems6" style="color: white;">↩</h2>
+                            <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                                <div class="container">
+                                    <label for="domaine" class="style">المجال</label> 
+                                    <br />  
+                                    <input type="text" id="domaine" name="domaine" value="التعبئات" class="what" id="what6"/>  
+                            </div>
+                            <div class="container">
+                            <label for="quand?" class="style">متى</label> 
+                            <br />  
+                            <input type="text" id="quand?" name="quand?"/>    
+                    
+                            </div>
+                            <div class="container">
+                            <label for="tous le nom" class="style">الاسم الكامل</label>   
+                            <br />
+                            <input type="text" id="tous le nom" name="tous le nom"/>  
+                            </div>
+                            <div class="container">
+                            <label for="email" class="style">بريد الالكتروني</label>   
+                            <br />
+                            <input type="email" id="email" name="email"/> 
+                            </div>
+                            <button type="submit" class="submit">ارسال</button>
+                    
+                            </form>
+                        </div>
+<script>
+    document.getElementById("what").disabled
+    
+    // items1
+    function btn1(){
+        document.getElementById("all-items").style.display = "none";
+        document.getElementById("items1").style.display = "block";
+    }
+    function rItems1(){
+        document.getElementById("all-items").style.display = "block";
+        document.getElementById("items1").style.display = "none";
+    }
+
+    //items2
+    function btn2(){
+        document.getElementById("all-items").style.display = "none";
+        document.getElementById("items2").style.display = "block";
+    }
+    function rItems2(){
+        document.getElementById("all-items").style.display = "block";
+        document.getElementById("items2").style.display = "none";
+    }
+    //items3
+    function btn3(){
+        document.getElementById("all-items").style.display = "none";
+        document.getElementById("items3").style.display = "block";
+    }
+    function rItems3(){
+        document.getElementById("all-items").style.display = "block";
+        document.getElementById("items3").style.display = "none";
+    }
+    //item4
+    function btn4(){
+        document.getElementById("all-items").style.display = "none";
+        document.getElementById("items4").style.display = "block";
+    }
+    function rItems4(){
+        document.getElementById("all-items").style.display = "block";
+        document.getElementById("items4").style.display = "none";
+    }
+    //item5
+    function btn5(){
+        document.getElementById("all-items").style.display = "none";
+        document.getElementById("items5").style.display = "block";
+    }
+    function rItems5(){
+        document.getElementById("all-items").style.display = "block";
+        document.getElementById("items5").style.display = "none";
+    }
+    //item6
+    function btn6(){
+        document.getElementById("all-items").style.display = "none";
+        document.getElementById("items6").style.display = "block";
+    }
+    function rItems6(){
+        document.getElementById("all-items").style.display = "block";
+        document.getElementById("items6").style.display = "none";
+    }
+    </script>
+</body>
+</html>
