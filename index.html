@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -18,8 +18,8 @@
             text-align:center;
         }
         .btn{
-            width: 130px;
-            height: 130px;
+            width: 105px;
+            height: 105px;
             font-family: Janna LT ;
             border: solid black 0.4px;
             background-color: rgb(0, 153, 255);
@@ -68,6 +68,7 @@
             
         }
         #title{
+
             padding:2.4%;
 	margin:-2.5%;
 	width: 100%;
@@ -99,6 +100,36 @@
         #rItems6{
             transform: translateX(-40%);
         }
+        #my-form-status{
+            display: none;
+            color: white;
+            text-align: center;
+        }
+        #my-form-status1{
+            display: none;
+            color: white;
+            text-align: center;
+        }
+        #my-form-status2{
+            display: none;
+            color: white;
+            text-align: center;
+        }
+        #my-form-status3{
+            display: none;
+            color: white;
+            text-align: center;
+        }
+        #my-form-status4{
+            display: none;
+            color: white;
+            text-align: center;
+        }
+        #my-form-status5{
+            display: none;
+            color: white;
+            text-align: center;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,20 +147,20 @@
     <br />
     <div align="center" id="all-items">
         <div >
-    <button id="btn1" onclick="btn1()" class="btn">الادوات المدرسية</button>    <button id="btn2" onclick="btn2()" class="btn">فوطوكوبي</button>
+    <button id="btn1" onclick="btn1()" class="btn"> <img src="C:\Users\zero\Desktop\proejct papa\fourniture scolaire.png" width="40px" height="40px"> <br />الادوات المدرسية</button>    <button id="btn2" onclick="btn2()" class="btn"> <img src="C:\Users\zero\Desktop\proejct papa\photocopie.png" width="40px" height="40px"> <br /> فوطوكوبي</button>
 </div>
     <br />
     <div>
-    <button id="btn3" onclick="btn3()" class="btn">AR - FR طبع البحوث</button>    <button id="btn4" onclick="btn4()" class="btn">تحرير العقود والطلبات</button>
+    <button id="btn3" onclick="btn3()" class="btn"> <img src="C:\Users\zero\Desktop\proejct papa\imprimante.png" width="40px" height="40px"> <br /> AR - FR طبع البحوث</button>    <button id="btn4" onclick="btn4()" class="btn"> <img src="C:\Users\zero\Desktop\proejct papa\contartct.png" width="40px" height="40px"> <br />تحرير العقود والطلبات</button>
 </div>
     <br />
     <div>
-    <button id="btn5" onclick="btn5()" class="btn">الخدمات المعلوماتية</button>    <button id="btn6" onclick="btn6()" class="btn"> التعبئات</button>
+    <button id="btn5" onclick="btn5()" class="btn"><img src="C:\Users\zero\Desktop\proejct papa\imformatique.png" width="40px" height="40px"> <br />الخدمات المعلوماتية</button>    <button id="btn6" onclick="btn6()" class="btn"> <img src="C:\Users\zero\Desktop\proejct papa\5e2b187870f93.jpg" width="60px" height="40px"> <br /> التعبئات</button>
 </div>
 </div>
 <div id="items1" align="center">
     <h2 onclick="rItems1()" id="rItems1" style="color: white;">↩</h2>
-        <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+        <form action="https://formspree.io/f/mqkwznvo" method="POST" id="my-form5">
             <div class="container">
                 <label for="domaine" class="style">المجال</label> 
                 <br />  
@@ -161,14 +192,39 @@
 
         </form>
     </div>
+    <p id="my-form-status5">
+        adil
+    </p>
+    <script>
+        var form = document.getElementById("my-form5");
 
-
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("my-form-status5");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+method: form.method,
+body: data,
+headers: {
+'Accept': 'application/json'
+}
+}).then(response => {
+status.style.display = "block"; 
+status.innerHTML = "شكرا";
+form.reset()
+}).catch(error => {
+status.style.display = "block"; 
+status.innerHTML = "هناك خطأ"
+});
+}
+form.addEventListener("submit", handleSubmit)
+    </script>
 
 
 
     <div id="items2" align="center">
         <h2 onclick="rItems2()" id="rItems1" style="color: white;">↩</h2>
-            <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+            <form action="https://formspree.io/f/mqkwznvo" method="POST" id="my-form4">
                 <div class="container">
                     <label for="domaine" class="style">المجال</label> 
                     <br />  
@@ -194,9 +250,43 @@
     
             </form>
         </div>
+        <p id="my-form-status4">
+            adil
+        </p>
+        <script>
+            var form = document.getElementById("my-form4");
+
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("my-form-status4");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+method: form.method,
+body: data,
+headers: {
+'Accept': 'application/json'
+}
+}).then(response => {
+status.style.display = "block"; 
+status.innerHTML = "شكرا";
+form.reset()
+}).catch(error => {
+status.style.display = "block"; 
+status.innerHTML = "هناك خطأ"
+});
+}
+form.addEventListener("submit", handleSubmit)
+        </script>
+
+
+
+
+
+
+
         <div id="items3" align="center">
             <h2 onclick="rItems3()" id="rItems3" style="color: white;">↩</h2>
-                <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                <form action="https://formspree.io/f/mqkwznvo" method="POST"id="my-form3" >
                     <div class="container">
                         <label for="domaine" class="style">المجال</label> 
                         <br />  
@@ -222,9 +312,41 @@
         
                 </form>
             </div>
+            <p id="my-form-status3">
+                adil
+            </p>
+            <script>
+                var form = document.getElementById("my-form3");
+
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("my-form-status3");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+method: form.method,
+body: data,
+headers: {
+'Accept': 'application/json'
+}
+}).then(response => {
+status.style.display = "block"; 
+status.innerHTML = "شكرا";
+form.reset()
+}).catch(error => {
+status.style.display = "block"; 
+status.innerHTML = "هناك خطأ"
+});
+}
+form.addEventListener("submit", handleSubmit)
+            </script>
+
+
+
+
+
             <div id="items4" align="center">
                 <h2 onclick="rItems4()" id="rItems4" style="color: white;">↩</h2>
-                    <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                    <form action="https://formspree.io/f/mqkwznvo" method="POST" id="my-form2" >
                         <div class="container">
                             <label for="domaine" class="style">المجال</label> 
                             <br />  
@@ -250,9 +372,42 @@
             
                     </form>
                 </div>
+                <p id="my-form-status2">
+                    adil
+                </p>
+                <script>
+                    var form = document.getElementById("my-form2");
+
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("my-form-status2");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+method: form.method,
+body: data,
+headers: {
+    'Accept': 'application/json'
+}
+}).then(response => {
+ status.style.display = "block"; 
+status.innerHTML = "شكرا";
+form.reset()
+}).catch(error => {
+status.style.display = "block"; 
+status.innerHTML = "هناك خطأ"
+});
+}
+form.addEventListener("submit", handleSubmit)
+                </script>
+
+
+
+
+
+
                 <div id="items5" align="center">
                     <h2 onclick="rItems5()" id="rItems5" style="color: white;">↩</h2>
-                        <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                        <form action="https://formspree.io/f/mqkwznvo" method="POST" id="my-form1" >
                             <div class="container">
                                 <label for="domaine" class="style">المجال</label> 
                                 <br />  
@@ -278,9 +433,47 @@
                 
                         </form>
                     </div>
+                    <p id="my-form-status1">
+                        adil
+                    </p>
+
+
+
+
+                    <script>
+                        var form = document.getElementById("my-form1");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status1");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+     status.style.display = "block"; 
+    status.innerHTML = "شكرا";
+    form.reset()
+  }).catch(error => {
+    status.style.display = "block"; 
+    status.innerHTML = "هناك خطأ"
+  });
+}
+form.addEventListener("submit", handleSubmit)
+                    </script>
+
+
+
+
+
+
+
                     <div id="items6" align="center">
                         <h2 onclick="rItems6()" id="rItems6" style="color: white;">↩</h2>
-                            <form action="https://formspree.io/f/mqkwznvo" method="POST" >
+                            <form action="https://formspree.io/f/mqkwznvo" method="POST" id="my-form" >
                                 <div class="container">
                                     <label for="domaine" class="style">المجال</label> 
                                     <br />  
@@ -302,10 +495,44 @@
                             <br />
                             <input type="email" id="email" name="email"/> 
                             </div>
-                            <button type="submit" class="submit">ارسال</button>
-                    
+                            <button type="submit" class="submit" id="my-form-button">ارسال</button>
+                            <p id="my-form-status">
+                                adil
+                            </p>
                             </form>
                         </div>
+
+
+
+                        
+                        <script>
+                            var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+         status.style.display = "block"; 
+        status.innerHTML = "شكرا";
+        form.reset()
+      }).catch(error => {
+        status.style.display = "block"; 
+        status.innerHTML = "هناك خطأ"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+                        </script>
+
+
+
+
 <script>
     document.getElementById("what").disabled
     
@@ -317,6 +544,12 @@
     function rItems1(){
         document.getElementById("all-items").style.display = "block";
         document.getElementById("items1").style.display = "none";
+        document.getElementById("my-form-status").style.display = "none";
+        document.getElementById("my-form-status1").style.display = "none";
+        document.getElementById("my-form-status2").style.display = "none";
+        document.getElementById("my-form-status3").style.display = "none";
+        document.getElementById("my-form-status4").style.display = "none";
+        document.getElementById("my-form-status5").style.display = "none";
     }
 
     //items2
@@ -327,6 +560,12 @@
     function rItems2(){
         document.getElementById("all-items").style.display = "block";
         document.getElementById("items2").style.display = "none";
+        document.getElementById("my-form-status").style.display = "none";
+        document.getElementById("my-form-status1").style.display = "none";
+        document.getElementById("my-form-status2").style.display = "none";
+        document.getElementById("my-form-status3").style.display = "none";
+        document.getElementById("my-form-status4").style.display = "none";
+        document.getElementById("my-form-status5").style.display = "none";
     }
     //items3
     function btn3(){
@@ -336,6 +575,12 @@
     function rItems3(){
         document.getElementById("all-items").style.display = "block";
         document.getElementById("items3").style.display = "none";
+        document.getElementById("my-form-status").style.display = "none";
+        document.getElementById("my-form-status1").style.display = "none";
+        document.getElementById("my-form-status2").style.display = "none";
+        document.getElementById("my-form-status3").style.display = "none";
+        document.getElementById("my-form-status4").style.display = "none";
+        document.getElementById("my-form-status5").style.display = "none";
     }
     //item4
     function btn4(){
@@ -345,6 +590,12 @@
     function rItems4(){
         document.getElementById("all-items").style.display = "block";
         document.getElementById("items4").style.display = "none";
+        document.getElementById("my-form-status").style.display = "none";
+        document.getElementById("my-form-status1").style.display = "none";
+        document.getElementById("my-form-status2").style.display = "none";
+        document.getElementById("my-form-status3").style.display = "none";
+        document.getElementById("my-form-status4").style.display = "none";
+        document.getElementById("my-form-status5").style.display = "none";
     }
     //item5
     function btn5(){
@@ -354,6 +605,12 @@
     function rItems5(){
         document.getElementById("all-items").style.display = "block";
         document.getElementById("items5").style.display = "none";
+        document.getElementById("my-form-status").style.display = "none";
+        document.getElementById("my-form-status1").style.display = "none";
+        document.getElementById("my-form-status2").style.display = "none";
+        document.getElementById("my-form-status3").style.display = "none";
+        document.getElementById("my-form-status4").style.display = "none";
+        document.getElementById("my-form-status5").style.display = "none";
     }
     //item6
     function btn6(){
@@ -363,7 +620,17 @@
     function rItems6(){
         document.getElementById("all-items").style.display = "block";
         document.getElementById("items6").style.display = "none";
+        document.getElementById("my-form-status").style.display = "none";
+        document.getElementById("my-form-status1").style.display = "none";
+        document.getElementById("my-form-status2").style.display = "none";
+        document.getElementById("my-form-status3").style.display = "none";
+        document.getElementById("my-form-status4").style.display = "none";
+        document.getElementById("my-form-status5").style.display = "none";
     }
+
+    
+
     </script>
+    
 </body>
 </html>
