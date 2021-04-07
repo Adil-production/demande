@@ -130,6 +130,9 @@
             color: white;
             text-align: center;
         }
+        #online{
+            display: none;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -503,7 +506,7 @@ form.addEventListener("submit", handleSubmit)
                         </div>
 
 
-
+<h1 id="online">adil</h1>
                         
                         <script>
                             var form = document.getElementById("my-form");
@@ -534,6 +537,13 @@ form.addEventListener("submit", handleSubmit)
 
 
 <script>
+    if(navigator.onLine) { 
+        document.getElementById("online").style.display = "none";
+}
+else{
+    document.getElementById("online").style.display = "block";
+
+}
     document.getElementById("what").disabled
     
     // items1
